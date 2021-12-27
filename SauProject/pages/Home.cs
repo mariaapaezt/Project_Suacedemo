@@ -17,29 +17,40 @@ namespace SauProject.pages
 
     public class Home
     {
-        public IWebDriver chromeDrive;
-        public string ruta = @"C:\Users\jesus\Downloads\chromedriver";
+       
 
-        
-        public IWebElement titulo { set; get; }
-        public IWebElement username { set; get; }
-        public IWebElement password { set; get; }
-        public IWebElement login_button { set; get; }
+        public string xpath_titulo = "//div[contains(@class,'login_logo')]";
+        public string xpath_username = "user-name";
+        public string xpath_password = "password";
+        public string xpath_login_button = "input[contains(@id,'login-button')]";
+        public IWebElement titulo;
+        public IWebElement username;
+        public IWebElement password;
+        public IWebElement login_button;
 
 
-
-        public void Crecenciales()
+        public void Credenciales(IWebDriver chromeDriver)
         {
-
-            chromeDrive = new ChromeDriver(ruta);
-            chromeDrive.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(35);
-            titulo = chromeDrive.FindElement(By.CssSelector("//div[contains(@class,'login_logo')]"));
-            username = chromeDrive.FindElement(By.XPath("//input[contains(@placeholder,'Username')]"));
-            password = chromeDrive.FindElement(By.XPath("//input[contains(@placeholder,'Password')]"));
-            login_button = chromeDrive.FindElement(By.CssSelector("input[contains(@id,'login-button')]"));
+            
+             titulo = chromeDriver.FindElement(By.CssSelector(xpath_titulo));
+             username = chromeDriver.FindElement(By.Name(xpath_username));
+             password = chromeDriver.FindElement(By.Name(xpath_password));
+             login_button = chromeDriver.FindElement(By.CssSelector(xpath_login_button));
         }
 
+        public void ValidarTituloPage(IWebDriver chromeDriver)
+        {
+            Credenciales(chromeDriver);
+            Assert.IsNotNull(titulo);
+        }
 
+        public void IngresarUsernameYPassword(IWebDriver chromeDriver)
+        {
+            Credenciales(chromeDriver);
+            username.SendKeys("standard_user");
+            password.SendKeys("secret_sauce");
+            login_button.Click();
+        }
     }
 
 }

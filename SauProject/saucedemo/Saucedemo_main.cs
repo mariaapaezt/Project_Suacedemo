@@ -8,7 +8,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Chrome;
-using SauProject.metod;
+using SauProject.pages;
 
 namespace SauProject
 {
@@ -19,15 +19,15 @@ namespace SauProject
         public IWebDriver chromeDrive;
         //public IWebDriver chromeDrive{ get; set; }
         public string url = "https://www.saucedemo.com/";
-        public string ruta = @"C:\Users\jesus\Downloads\chromedriver";
+        public string ruta = @"C:\Users\jesus\source\repos\SauProject\SauProject\driver";
         
 
         [TestMethod]
         public void TestIngresarWeb()
         {
-            Validaciones validaciones = new Validaciones();
-            validaciones.ValidarTituloPage();
-            validaciones.IngresarUsernameYPassword();
+            Home pages = new Home();
+            pages.ValidarTituloPage(chromeDrive);
+            pages.IngresarUsernameYPassword(chromeDrive);
 
         }
 
