@@ -1,0 +1,11 @@
+C:\Users\jesus\source\repos\SauProject\SauProject\bin\Debug\SauProject.dll
+C:\Users\jesus\source\repos\SauProject\SauProject\bin\Debug\SauProject.pdb
+C:\Users\jesus\source\repos\SauProject\SauProject\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\jesus\source\repos\SauProject\SauProject\bin\Debug\WebDriver.dll
+C:\Users\jesus\source\repos\SauProject\SauProject\bin\Debug\WebDriver.Support.dll
+C:\Users\jesus\source\repos\SauProject\SauProject\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\jesus\source\repos\SauProject\SauProject\obj\Debug\SauProject.csproj.AssemblyReference.cache
+C:\Users\jesus\source\repos\SauProject\SauProject\obj\Debug\SauProject.csproj.CoreCompileInputs.cache
+C:\Users\jesus\source\repos\SauProject\SauProject\obj\Debug\SauProject.csproj.CopyComplete
+C:\Users\jesus\source\repos\SauProject\SauProject\obj\Debug\SauProject.dll
+C:\Users\jesus\source\repos\SauProject\SauProject\obj\Debug\SauProject.pdb
